@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth; /* Membuat scroll menjadi halus */
 }
+html {
+  height: -webkit-fill-available;
+}
 
 * {
     margin: 0;
@@ -12,6 +15,9 @@ html {
     font-family: Montserrat, sans-serif;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
   }
   .decorative-stripes {
     width: 100px;
