@@ -11,25 +11,6 @@ body {
   body.fade-out {
     opacity: 0;  /* Mengubah opacity ke 0 untuk efek fade */
   }
-  
-  .decorative-stripes {
-    width: 150px;  /* Lebar bar */
-    height: 100%; /* Tinggi 100% halaman */
-    background: linear-gradient(
-      to left,  /* Arah garis dari atas ke bawah */
-      rgb(0, 0, 0) 20px,  /* Warna merah */
-      rgb(0, 0, 0) 40px,  /* Ukuran strip merah */
-      #E74C3C 40px,
-      #E74C3C 60px,
-      #ffffff 60px,    /* Warna hitam */
-      #ffffff 80px    /* Ukuran strip hitam */
-    );
-    position: fixed;  /* Memastikan bar tetap ada di posisi tetap saat scroll */
-    top: 0;  /* Menempel di bagian atas layar */
-    left: 40px;  /* Menempel di sisi kiri layar */
-    z-index: 1;  /* Pastikan berada di depan konten */
-  }
-  
   .container {
     display: flex;
     height: 100vh;
