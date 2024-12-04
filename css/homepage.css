@@ -466,7 +466,7 @@ h1 {
     display: none;
     flex-direction: column;
     gap: 0.5rem;
-    position: absulote;
+    position: absolute;
     top: 60px;
     left: 0;
     right: 0;
