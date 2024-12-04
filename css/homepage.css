@@ -97,11 +97,15 @@ section.visible {
 .navbar ul {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar ul li {
-  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin: 0;
   transition: background-color 0.3s ease;
 }
 
@@ -366,13 +370,6 @@ h1 {
   margin-bottom: 30px;
 }
 
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-}
-
 .navbar a {
   text-decoration: none;
   color: #000;
@@ -447,7 +444,7 @@ h1 {
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -471,7 +468,7 @@ h1 {
     left: 0;
     right: 0;
     background-color: white;
-    padding: 0;
+    padding: 0.5rem;
     margin:0 ;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
