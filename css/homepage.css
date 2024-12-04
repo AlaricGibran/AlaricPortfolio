@@ -459,7 +459,7 @@ h1 {
 /* Responsive navbar */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: inline-block;
     flex-direction: column;
     gap: 0.5rem;
     position: absolute;
