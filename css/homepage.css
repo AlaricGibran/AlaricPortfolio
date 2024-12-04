@@ -402,3 +402,41 @@ h1 {
   .about-me-img {
     width: 80%;
     margin-bottom:
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Show hamburger menu on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
