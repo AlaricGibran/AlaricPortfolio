@@ -470,4 +470,8 @@ h1 {
   .nav-links-active {
     display: flex;
   }
+
+  .hamburger {
+    display: flex;
+  }
 }
