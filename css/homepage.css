@@ -1,29 +1,28 @@
+Tentu! Mari kita rapihkan kode CSS Anda agar tampil lebih baik di laptop dan perangkat mobile. Saya akan menambahkan media queries yang lebih lengkap dan membuat beberapa penyesuaian untuk memastikan layout yang responsif.
+
+```css
 html {
-  scroll-behavior: smooth; /* Membuat scroll menjadi halus */
-}
-html {
+  scroll-behavior: smooth;
   height: -webkit-fill-available;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: Montserrat, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    height: -webkit-fill-available;
-  }
-  body {
-    padding-top: 5px;
-  }
+body {
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  padding-top: 5px;
+}
 
-  /* Menyembunyikan semua section pada awalnya */
+/* Menyembunyikan semua section pada awalnya */
 section {
   opacity: 0;
   transform: translateY(30px);
@@ -36,7 +35,6 @@ section.visible {
   transform: translateY(0);
 }
 
-/* Menyembunyikan skill section pada awalnya */
 #skills {
   opacity: 0;
   transform: translateY(30px);
@@ -52,9 +50,8 @@ section.visible {
   transform: translateY(0);
 }
 
-/* Animasi untuk tombol back */
 #backButton {
-  display: none; /* Menyembunyikan tombol back secara default */
+  display: none;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -72,224 +69,168 @@ section.visible {
   background-color: #c0392b;
 }
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: #fff;          /* Warna latar belakang navbar */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk navbar */
-  }
-  
-  .navbar .logo {
-    text-decoration: none;
-    outline: none;
-    border: none;
-  }
-  
-  .navbar .logo:hover {
-    opacity: 50;  /* Tidak ada perubahan opacity saat hover */
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;              /* Jarak antar menu */
-  }
-  
-  .navbar ul li {
-    display: inline-block;
-    transition: background-color 0.3s ease; /* Efek transisi pada background */
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 1rem 1.5rem;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk latar belakang dan warna */
-  }
-  
-  /* Efek hover untuk tombol */
-  .navbar ul li a:hover {
-    background-color: #e74c3c; /* Ubah latar belakang menjadi merah saat hover */
-    color: #fff;               /* Ubah warna teks menjadi putih */
-  }
-  
-  /* Navbar menjadi sticky */
-  .navbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  
-  /* Menambahkan efek CTA ke navbar */
-  .navbar a {
-    background-color: #ffffff00;  /* Warna latar belakang tombol CTA */
-    color: #fff;                /* Warna teks putih */
-    padding: 1rem 2rem;         /* Padding untuk tombol */
-    border-radius: 5px;         /* Membuat sudut tombol melengkung */
-    text-transform: uppercase;  /* Membuat teks menjadi kapital */
-    font-weight: bold;          /* Memberikan penekanan pada font */
-    transition: background-color 0.3s ease; /* Transisi untuk perubahan warna tombol */
-  }
-  
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6rem 6rem;
-    background: #fff;
-    position: relative;
-  }
-  
-  .hero-text h1 {
-    font-size: 3rem;
-    color: #e74c3c;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-text h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-text p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-right: 2rem;
-  }
-  
-  .hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Menggunakan tinggi viewport agar memenuhi layar */
-  }
-  
-  /* Gambar di dalam hero section */
-  .hero-image img {
-    width: 100%; /* Mengatur gambar untuk memenuhi lebar kontainer */
-    height: 100%; /* Mengatur tinggi gambar agar memenuhi kontainer */
-    object-fit: cover; /* Memastikan gambar tetap proporsional dan tidak terdistorsi */
-    border-radius: 10px;
-    transition: opacity 0.5s ease;
-  }
-  
-  @media (max-width: 768px) {
-    .hero-image img {
-      width: 100%;
-      height: auto; /* Menyesuaikan gambar dengan lebar kontainer pada layar kecil */
-    }
-  }
-  
-  /* Menyembunyikan gambar */
-  .hero-image img.hidden {
-    opacity: 0;
-  }
-  
-  /* Skill section tumpang tindih dengan gambar */
-  .skills-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Background semi-transparan, bisa diubah */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    opacity: 0; /* Awalnya tersembunyi */
-    transition: opacity 0.5s ease;
-  }
-  
-  /* Menampilkan skill section */
-  .skills-section.visible {
-    opacity: 1;
-  }
-  
-  /* Tombol untuk kembali ke gambar */
-  .back-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 40px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .back-button:hover {
-    background-color: #0056b3;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .cta-section {
-    position: absolute; /* Menempatkan tombol di posisi yang lebih tepat */
-    top: 105%;  /* Menyesuaikan posisi vertikal */
-    left: 75%;
-    transform: translateX(-50%); /* Menjaga posisi tetap di tengah */
-  }
-  
-  .cta-button {
-    display: inline-block;
-    background: #e74c3c;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background: #c0392b;
-  }
-    
-  .hero-image img {
-    transition: opacity 0.5s ease;  /* Menambahkan animasi */
-  }
-  
-  .hero-image img.hidden {
-    opacity: 0; /* Mengubah opasitas gambar */
-  }
-  
-  .stars {
-    font-size: 20px;
-    color: #e74c3c;
-  }
-  
-  #backButton:hover {
-    background-color: #c0392b;
-  }
+.navbar .logo {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
 
-  /* General Section Styling */
+.navbar .logo:hover {
+  opacity: 50;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li {
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 6rem;
+  background: #fff;
+  position: relative;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-right: 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+
+.hero-image img.hidden {
+  opacity: 0;
+}
+
+.skills-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.skills-section.visible {
+  opacity: 1;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.cta-section {
+  position: absolute;
+  top: 105%;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+.cta-button {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #c0392b;
+}
+
+.stars {
+  font-size: 20px;
+  color: #e74c3c;
+}
+
 .section {
   padding: 100px;
   text-align: center;
 }
 
 #about-me {
-  background-color: #e74c3c; /* Latar belakang merah */
+  background-color: #e74c3c;
   padding: 100px;
   margin-top: 20px;
 }
@@ -297,7 +238,8 @@ section.visible {
 .about-me-content {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Membuat jarak antara teks dan gambar */
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .about-me-img-container {
@@ -306,39 +248,42 @@ section.visible {
 
 .about-me-img-circle {
   position: absolute;
-  top: -10px; /* Menyesuaikan posisi bulat di belakang gambar */
+  top: -10px;
   left: -10px;
-  width: 250px;  /* Ukuran bulat */
+  width: 250px;
   height: 350px;
-  background-color: #ffffff; /* Warna bulat putih */
-  border-radius: 20%;  /* Membuat elemen berbentuk bulat */
-  z-index: -1;  /* Menempatkan bulat di belakang gambar */
+  background-color: #ffffff;
+  border-radius: 20%;
+  z-index: -1;
 }
 
 .about-me-img {
-  width: 300px; /* Ukuran gambar */
-  height: 400PX;
-  border-radius: 10%; /* Membuat gambar menjadi berbentuk lingkaran */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 1rem;
 }
 
 .about-me-text {
   max-width: 600px;
+  text-align: center;
 }
 
 .about-me-text h2 {
-  font-size: 32px; /* Ukuran font judul */
-  color: white; /* Warna teks putih */
-  font-weight: bold; /* Membuat judul lebih tebal */
-  margin-bottom: 20px; /* Jarak antara judul dan teks */
-  font-family: Montserrat, sans-serif
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: Montserrat, sans-serif;
 }
 
 .about-me-text p {
   font-size: 18px;
-  color: #fff; /* Warna teks putih */
+  color: #fff;
   line-height: 1.6;
   font-weight: 400;
-  font-family: Montserrat, sans-serif
+  font-family: Montserrat, sans-serif;
 }
 
 #portfolio {
@@ -347,16 +292,17 @@ section.visible {
 }
 
 #portfolio h1 {
-  font-size: 3rem;  /* Ukuran font yang lebih besar */
-  color: #333;      /* Warna teks yang gelap agar terlihat jelas */
-  text-align: center; /* Menyelaraskan teks di tengah */
-  margin-bottom: 20px; /* Memberikan jarak bawah agar tidak terlalu rapat dengan konten di bawahnya */
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .portfolio-items {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .portfolio-item img {
@@ -370,22 +316,17 @@ section.visible {
   font-size: 30px;
 }
 
-.red-background {
-  background-color: #f44336;
-  color: #fff;
-}
-
 #social-media {
   text-align: center;
   padding: 80px 20px;
 }
 
 #social-media img.profile-photo {
-  max-width: 400px;  /* Ukuran foto yang sesuai */
-  height: 400px;     /* Menjadikan tinggi foto sama dengan lebar untuk bentuk kotak */
-  margin-bottom: 30px; /* Memberi jarak antara foto dan judul */
-  border-radius: 10%;  /* Membuat gambar menjadi berbentuk lingkaran */
-  object-fit: cover;   /* Memastikan gambar tetap mengisi container tanpa terdistorsi */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 10%;
+  object-fit: cover;
 }
 
 .social-media-list {
@@ -393,7 +334,7 @@ section.visible {
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
-  margin-bottom: 20px; /* Agar item bisa turun ke bawah jika lebar layar kecil */
+  margin-bottom: 20px;
 }
 
 .social-media-item a {
@@ -405,24 +346,22 @@ section.visible {
 }
 
 .social-media-item img {
-  width: 40px;  /* Ukuran ikon bisa disesuaikan */
+  width: 40px;
   height: 40px;
   margin-bottom: 10px;
 }
 
 .social-media-item p {
-  font-size: 14px;  /* Ukuran font bisa disesuaikan */
+  font-size: 14px;
   text-align: center;
   color: white;
 }
 
-
 h1 {
   font-size: 2.5rem;
   color: white;
-  margin-bottom: 30px; /* Memberi jarak lebih antara judul dan elemen di bawahnya */
+  margin-bottom: 30px;
 }
-
 
 .navbar ul {
   display: flex;
@@ -436,3 +375,29 @@ h1 {
   color: #000;
   font-weight: bold;
 }
+
+/* Media Queries untuk Tampilan Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-me-content {
+    flex-direction: column;
+  }
+  .about-me-img {
+    width: 80%;
+    margin-bottom:
