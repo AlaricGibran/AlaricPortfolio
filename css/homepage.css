@@ -430,9 +430,11 @@ h1 {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 0.5rem;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links li {
@@ -464,12 +466,13 @@ h1 {
     display: none;
     flex-direction: column;
     gap: 0.5rem;
-    position: fixed;
+    position: absulote;
     top: 60px;
     left: 0;
     right: 0;
     background-color: white;
-    padding: 1rem;
+    padding: 0;
+    margin:0 ;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
