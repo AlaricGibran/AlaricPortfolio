@@ -100,7 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
 
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-links-active');
+   console.log("Hamburger clicked"); // Debug log
+  navLinks.classList.toggle("nav-links-active");
+  console.log(navLinks.classList); // Debug log
   });
 });
 
