@@ -104,4 +104,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const navbar = document.querySelector('.navbar');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      navbar.style.top = '-80px'; // Hide navbar on scroll down
+    } else {
+      navbar.style.top = '0'; // Show navbar on scroll up
+    }
+    lastScrollTop = scrollTop;
+  });
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-links-active');
+  });
+});
+
+
   
