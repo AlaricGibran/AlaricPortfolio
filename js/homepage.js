@@ -95,4 +95,13 @@ backButton.addEventListener('click', function (event) {
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
   });
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-links-active');
+  });
+});
+
   
