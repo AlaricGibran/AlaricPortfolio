@@ -1,6 +1,4 @@
-Tentu! Mari kita rapihkan kode CSS Anda agar tampil lebih baik di laptop dan perangkat mobile. Saya akan menambahkan media queries yang lebih lengkap dan membuat beberapa penyesuaian untuk memastikan layout yang responsif.
-
-```css
+/* Global Styles */
 html {
   scroll-behavior: smooth;
   height: -webkit-fill-available;
@@ -22,53 +20,7 @@ body {
   padding-top: 5px;
 }
 
-/* Menyembunyikan semua section pada awalnya */
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Menampilkan section saat diberi kelas .visible */
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#skills {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-#skills.hidden {
-  display: none;
-}
-
-#skills.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#backButton {
-  display: none;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  margin-top: 40px;
-  font-family: Montserrat, sans-serif;
-}
-
-#backButton.visible {
-  display: inline-block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#backButton:hover {
-  background-color: #c0392b;
-}
-
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -81,50 +33,70 @@ section.visible {
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: top 0.3s, height 0.3;
+  transition: top 0.3s ease, height 0.3s ease;
 }
 
 .navbar .logo {
   text-decoration: none;
-  outline: none;
-  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .navbar .logo:hover {
-  opacity: 50;
+  opacity: 0.7;
 }
 
-.navbar ul {
-  list-style: none;
+/* Navbar Links */
+.nav-links {
   display: flex;
-  flex-direction: row;
+  list-style: none;
   gap: 1.5rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.navbar ul li {
+.nav-links li {
   padding: 0.25rem 0.5rem;
   margin: 0;
   transition: background-color 0.3s ease;
 }
 
-.navbar ul li a {
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-size: 1.1rem;
   font-weight: bold;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
-  display: inline-block;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar ul li a:hover {
+.nav-links a:hover {
   background-color: #e74c3c;
   color: #fff;
 }
 
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.nav-links-active {
+  display: flex;
+}
+
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -165,320 +137,46 @@ section.visible {
   opacity: 0;
 }
 
-.skills-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.skills-section.visible {
-  opacity: 1;
-}
-
-.back-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 40px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.back-button:hover {
-  background-color: #0056b3;
-}
-
-.cta-section {
-  position: absolute;
-  top: 105%;
-  left: 75%;
-  transform: translateX(-50%);
-}
-
-.cta-button {
-  display: inline-block;
-  background: #e74c3c;
-  color: #fff;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #c0392b;
-}
-
-.stars {
-  font-size: 20px;
-  color: #e74c3c;
-}
-
-.section {
-  padding: 100px;
-  text-align: center;
-}
-
-#about-me {
-  background-color: #e74c3c;
-  padding: 100px;
-  margin-top: 20px;
-}
-
-.about-me-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.about-me-img-container {
-  position: relative;
-}
-
-.about-me-img-circle {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 250px;
-  height: 350px;
-  background-color: #ffffff;
-  border-radius: 20%;
-  z-index: -1;
-}
-
-.about-me-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 10%;
-  margin-bottom: 1rem;
-}
-
-.about-me-text {
-  max-width: 600px;
-  text-align: center;
-}
-
-.about-me-text h2 {
-  font-size: 32px;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 20px;
-  font-family: Montserrat, sans-serif;
-}
-
-.about-me-text p {
-  font-size: 18px;
-  color: #fff;
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: Montserrat, sans-serif;
-}
-
-#portfolio {
-  background-color: #ffffff;
-  font-size: 40px;
-}
-
-#portfolio h1 {
-  font-size: 3rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.portfolio-items {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.portfolio-item img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 100px;
-}
-
-.portfolio-item h2 {
-  margin-top: 50px;
-  font-size: 30px;
-}
-
-#social-media {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #e74c3c;
-}
-
-#social-media img.profile-photo {
-  max-width: 100%;
-  width: 150px;
-  height: auto;
-  margin-bottom: 30px;
-  border-radius: 10%;
-  object-fit: cover;
-}
-
-.social-media-list {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.social-media-item a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-}
-
-.social-media-item img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-}
-
-.social-media-item p {
-  font-size: 14px;
-  text-align: center;
-  color: white;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: white;
-  margin-bottom: 30px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-/* Media Queries untuk Tampilan Mobile */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     padding: 2rem;
   }
+
   .hero-text h1 {
     font-size: 2rem;
   }
+
   .hero-text h2 {
     font-size: 1.5rem;
   }
+
   .hero-text p {
     font-size: 0.9rem;
   }
-  .navbar ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .about-me-content {
-    flex-direction: column;
-  }
-  .about-me-img {
-    width: 80%;
-    margin-bottom:
-/* Hamburger menu styles */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-}
 
-.hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  border-radius: 5px;
-}
-  .nav-links-active {
-    display: flex;
-  }
-
+  /* Navbar for Mobile */
   .hamburger {
     display: flex;
   }
-}
-  
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0.5rem;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
 
-.nav-links li {
-  transition: background-color 0.3s ease;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  display: inline-block;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 0.25rem 0.75rem;
-  border-radius: 5px;
-  display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links a:hover {
-  background-color: #e74c3c;
-  color: #fff;
-}
-
-/* Responsive navbar */
-@media (max-width: 768px) {
   .nav-links {
-    display: inline-block;
+    display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
     background-color: white;
-    padding: 0.5rem;
-    margin:0 ;
+    padding: 1rem;
+    margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
 
   .nav-links-active {
-    display: flex;
-    top: 60px;
-  }
-
-  .hamburger {
     display: flex;
   }
 
