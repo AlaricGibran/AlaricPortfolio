@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-      navbar.style.top = '-770px'; // Hide navbar on scroll down
+      navbar.style.top = '-100px'; // Hide navbar on scroll down
     } else {
       navbar.style.top = '0'; // Show navbar on scroll up
     }
