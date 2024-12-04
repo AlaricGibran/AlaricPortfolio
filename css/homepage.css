@@ -81,6 +81,7 @@ section.visible {
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: top 0.3s, height 0.3;
 }
 
 .navbar .logo {
@@ -458,7 +459,7 @@ h1 {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
     right: 0;
@@ -470,9 +471,14 @@ h1 {
 
   .nav-links-active {
     display: flex;
+    top: 60px;
   }
 
   .hamburger {
     display: flex;
+  }
+
+  main {
+    margin-top: 80px;
   }
 }
