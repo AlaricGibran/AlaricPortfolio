@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     skillsSection.classList.add('visible'); // Tambahkan animasi (jika ada)
     heroImage.classList.add('hidden'); // Sembunyikan gambar hero
     skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    console.log('Skills Section Visible');
   });
 
   // Tombol Back untuk kembali ke hero section
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     skillsSection.classList.remove('visible'); // Hapus kelas visible
     heroImage.classList.remove('hidden'); // Tampilkan kembali gambar hero
     heroImage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    console.log('Back Button Clicked');
   });
 
   // Fungsi hamburger menu
