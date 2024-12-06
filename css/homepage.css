@@ -155,85 +155,88 @@ body {
   opacity: 0;
 }
 
+/* Overlay for Skills Pop-up */ 
+.skills-popup-overlay { 
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.5)
+  ; z-index: 2000; 
+  justify-content: center; 
+  align-items: center;
+} 
+.skills-popup-overlay.active { 
+  display: flex;
+} 
+
+/* Skills Pop-up */ 
+.skills-popup { 
+  background: #fff; 
+  padding: 2rem; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; width: 90%;
+} 
+
+.skills-popup h2 { 
+  margin-bottom: 1rem;
+} 
+
+.skills-popup .skills, 
+.skills-popup .roles { 
+  margin-bottom: 1.5rem;
+} 
+
+.skills-popup .skill { 
+  display: flex;
+  align-items: center
+  ; margin-bottom: 0.5rem;
+} 
+
+.skills-popup .skill img.skill-icon { 
+  width: 30px; 
+  height: 30px; 
+  margin-right: 0.5rem;
+} 
+
+.skills-popup .stars { 
+  margin-left: auto;
+} 
+
+.skills-popup .cta-button { 
+  background: #e74c3c; 
+  color: #fff; 
+  padding: 0.5rem 1rem; 
+  text-decoration: none; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background 0.3s ease;
+} 
+
+.skills-popup .cta-button:hover { 
+  background: #c0392b;
+  color: #fff; 
+  padding: 0.5rem 1rem; 
+  text-decoration: none; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background 0.3s ease;
+}
+
+.skills-popup .cta-button:hover { 
+  background: #c0392b;
+}
+
 section {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-}
-
-//* Styling Pop-up */
-.skills-popup {
-  position: fixed; /* Agar selalu muncul di layar */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Latar belakang overlay */
-  display: none; /* Disembunyikan secara default */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Pastikan di atas elemen lain */
-}
-
-.skills-popup.visible {
-  display: flex; /* Tampilkan pop-up */
-}
-
-.skills-popup-content {
-  background: #fff; /* Latar belakang konten */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 600px;
-  width: 90%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.skills-popup h2 {
-  margin-bottom: 20px;
-}
-
-.skills-popup .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.skills-popup .skill {
-  width: 120px;
-  text-align: center;
-}
-
-.skills-popup .skill-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.skills-popup .stars {
-  font-size: 14px;
-}
-
-.cta-button {
-  background-color: #e74c3c;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background-color: #c0392b;
-}
-
-#closeButton {
-  margin-top: 20px;
-}
-
-.skills-popup.hidden {
-  display: none; /* Sembunyikan pop-up */
 }
 
 /* Call-to-Action Button */
