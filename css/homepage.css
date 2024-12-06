@@ -171,7 +171,7 @@ section {
   display: none; /* Sembunyikan pop-up secara default */
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Pastikan berada di atas konten lain */
+  z-index: 9999; /* Pastikan berada di atas konten lain */
 }
 
 .skills-popup-content {
