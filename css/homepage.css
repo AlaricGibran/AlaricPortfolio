@@ -188,7 +188,6 @@ section.visible {
 #skills.visible {
   opacity: 1; /* Tampilkan saat kelas .visible diterapkan */
   transform: translateY(0); /* Kembalikan ke posisi semula */
-  display: block;
 }
 
 /* Back Button */
