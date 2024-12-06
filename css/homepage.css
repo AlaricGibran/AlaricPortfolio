@@ -96,6 +96,28 @@ body {
   display: flex;
 }
 
+/* Tambahkan kode close button di bawah ini */
+.hidden {
+  display: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 100;
+  background: transparent;
+  border: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #e74c3c;
+}
+
 /* Hero Section */
 .hero {
   display: flex;
