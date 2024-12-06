@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     skillsSection.classList.remove('hidden'); // Tampilkan skill section
     skillsSection.classList.add('visible'); // Tambahkan animasi (jika ada)
+    console.log('Skills Section Visible');
     heroImage.classList.add('hidden'); // Sembunyikan gambar hero
     skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    console.log('Skills Section Visible');
   });
 
   // Tombol Back untuk kembali ke hero section
@@ -24,23 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     skillsSection.classList.add('hidden'); // Sembunyikan skill section
     skillsSection.classList.remove('visible'); // Hapus kelas visible
+    console.log('Back Button Clicked');
     heroImage.classList.remove('hidden'); // Tampilkan kembali gambar hero
     heroImage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    console.log('Back Button Clicked');
   });
 
-  // Fungsi hamburger menu
+  // Hamburger menu
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-links-active'); // Tampilkan atau sembunyikan menu
-    hamburger.classList.add('hidden'); // Sembunyikan tombol hamburger
-    closeButton.classList.remove('hidden'); // Tampilkan tombol close
+    console.log('Hamburger Clicked');
+    navLinks.classList.add('nav-links-active');
+    hamburger.style.display = 'none'; // Sembunyikan tombol hamburger
+    closeButton.style.display = 'block'; // Tampilkan tombol close
   });
 
-  // Fungsi close menu
+  // Close menu
   closeButton.addEventListener('click', () => {
-    navLinks.classList.remove('nav-links-active'); // Sembunyikan menu
-    hamburger.classList.remove('hidden'); // Tampilkan tombol hamburger
-    closeButton.classList.add('hidden'); // Sembunyikan tombol close
+    console.log('Close Button Clicked');
+    navLinks.classList.remove('nav-links-active');
+    hamburger.style.display = 'block'; // Tampilkan tombol hamburger lagi
+    closeButton.style.display = 'none'; // Sembunyikan tombol close
   });
 
   // Navbar sembunyi/muncul saat scroll
