@@ -160,6 +160,32 @@ section {
   transition: opacity 0.5s ease-in-out;
 }
 
+/* Skill Styling */
+.skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.skill img {
+  width: 30px;
+  height: 30px;
+}
+
+.skill .stars {
+  font-size: 16px;
+}
+
 /* Skills Section */
 #skills {
   opacity: 0; /* Mulai dengan tidak terlihat */
