@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Tombol CTA untuk menampilkan skill section
   ctaButton.addEventListener('click', (event) => {
     event.preventDefault();
+    console.log('CTA Button clicked!');
     skillsSection.classList.remove('hidden'); // Tampilkan skill section
     skillsSection.classList.add('visible'); // Tambahkan animasi (jika ada)
     heroImage.classList.add('hidden'); // Sembunyikan gambar hero
