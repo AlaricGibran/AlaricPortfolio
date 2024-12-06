@@ -234,6 +234,14 @@ body {
   background: #c0392b;
 }
 
+.skills-popup.visible {
+  display: flex; /* Ditampilkan dengan Flexbox */
+}
+
+.hidden {
+  display: none; /* Untuk menyembunyikan pop-up */
+}
+
 section {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
