@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Back Button Clicked');
     skillsSection.classList.add('hidden'); // Sembunyikan skill section
     skillsSection.classList.remove('visible'); // Hapus kelas visible
-    console.log('Skill Section Hidden');
+    console.log('Skills Section Hidden');
     heroImage.classList.remove('hidden'); // Tampilkan kembali gambar hero
     heroImage.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
