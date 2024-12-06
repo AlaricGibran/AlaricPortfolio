@@ -199,17 +199,17 @@ section {
   z-index: 10;  /* Pastikan elemen berada di atas elemen lainnya */
 }
 
-#skills.hidden {
-  display: none; /* Elemen tidak terlihat dan tidak mengambil ruang */
-  opacity: 0; /* Transparan (opsional jika ingin transisi animasi) */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
 #skills.visible {
   display: block;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out
+}
+
+#skills.hidden {
+  display: none; /* Elemen tidak terlihat dan tidak mengambil ruang */
+  opacity: 0; /* Transparan (opsional jika ingin transisi animasi) */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* Back Button */
