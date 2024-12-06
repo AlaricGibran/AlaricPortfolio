@@ -122,6 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lastScrollTop = scrollTop;
   });
-
+});
 
   
