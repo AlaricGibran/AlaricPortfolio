@@ -188,9 +188,15 @@ section {
 
 /* Skills Section */
 #skills {
-  opacity: 0; /* Mulai dengan tidak terlihat */
-  transform: translateY(30px); /* Mulai dengan posisi lebih rendah */
+  position: absolute; /* Memposisikan elemen relatif terhadap posisi terdekat dengan position: relative */
+  top: 20vh;  /* Mengatur jarak dari atas viewport, sesuaikan sesuai kebutuhan */
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  display: none;
+  z-index: 10;  /* Pastikan elemen berada di atas elemen lainnya */
 }
 
 #skills.hidden {
@@ -200,10 +206,10 @@ section {
 }
 
 #skills.visible {
-  display: block; /* Elemen terlihat */
-  opacity: 1; /* Tampilkan elemen */
-  transform: translateY(0); /* Kembali ke posisi semula */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out
 }
 
 /* Back Button */
@@ -423,6 +429,12 @@ section {
     font-size: 0.9rem;
   }
 
+@media (max-width: 768px) {
+  #skills {
+    top: 10vh;  /* Menyesuaikan posisi untuk layar kecil */
+    width: 90%;  /* Mengurangi lebar untuk layar kecil */
+  }
+  
 @media (max-width: 768px) {
   #about-me {
     padding: 20px; /* Padding lebih kecil di perangkat mobile */
