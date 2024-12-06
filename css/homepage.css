@@ -161,17 +161,10 @@ body {
 
 /* Menyembunyikan semua section pada awalnya */
 section {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
-/* Menampilkan section saat diberi kelas .visible */
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Skills Section */
 #skills {
   opacity: 0; /* Mulai dengan tidak terlihat */
