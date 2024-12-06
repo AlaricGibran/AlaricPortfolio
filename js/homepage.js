@@ -97,6 +97,7 @@ window.addEventListener('load', () => {
   });
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
+  const closeButton = document.getElementById('closeButton');
   const navLinks = document.querySelector('.nav-links');
 
   hamburger.addEventListener('click', () => {
@@ -104,8 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   navLinks.classList.toggle("nav-links-active");
   console.log(navLinks.classList); // Debug log
   });
-});
-
+  
   closeButton.addEventListener('click', () => {
     navLinks.classList.remove('nav-links-active'); // Sembunyikan menu
     hamburger.classList.remove('hidden'); // Tampilkan tombol hamburger
