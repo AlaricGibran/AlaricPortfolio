@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     heroImage.classList.remove('hidden'); // Tampilkan kembali gambar hero
     heroImage.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-});
 
   // Hamburger menu
   hamburger.addEventListener('click', () => {
