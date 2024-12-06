@@ -4,20 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const skillsSection = document.getElementById('skills');
   const heroImage = document.querySelector('.hero-image img');
   const hamburger = document.querySelector('.hamburger');
-  const closeButton = document.getElementById('closeButton'); // Pastikan elemen ini ada di HTML
+  const closeButton = document.getElementById('closeButton');
   const navLinks = document.querySelector('.nav-links');
   const navbar = document.querySelector('.navbar');
   let lastScrollTop = 0;
 
   // Tombol CTA untuk menampilkan skill section
   ctaButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  console.log('CTA Button Triggered'); // Debug
-  skillsSection.classList.remove('hidden'); // Tampilkan skill section
-  skillsSection.classList.add('visible'); // Tambahkan animasi
-  heroImage.classList.add('hidden'); // Sembunyikan gambar hero
-  skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
+    event.preventDefault();
+    console.log('CTA Button Triggered');
+    skillsSection.classList.remove('hidden'); // Tampilkan skill section
+    skillsSection.classList.add('visible'); // Tambahkan animasi
+    heroImage.classList.add('hidden'); // Sembunyikan gambar hero
+    skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   // Tombol Back untuk kembali ke hero section
   backButton.addEventListener('click', (event) => {
