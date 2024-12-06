@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     skillsSection.classList.remove('hidden'); // Tampilkan skill section
     skillsSection.classList.add('visible'); // Tambahkan animasi (jika ada)
+    console.log('skill section visibility toggled');
     heroImage.classList.add('hidden'); // Sembunyikan gambar hero
     skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
