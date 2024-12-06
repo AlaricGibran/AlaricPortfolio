@@ -182,7 +182,6 @@ section.visible {
 #skills.visible {
   opacity: 1;
   transform: translateY(0);
-  display: block;
 }
 #backButton {
   display: none;
