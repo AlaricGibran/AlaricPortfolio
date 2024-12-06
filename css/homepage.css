@@ -248,8 +248,8 @@ section.visible {
 /* Call-to-Action Button */
 .cta-section {
   position: absolute;
-  top: 105%;
-  left: 75%;
+  top: 80%;
+  left: 50%;
   transform: translateX(-50%);
 }
 
@@ -380,15 +380,5 @@ section.visible {
     padding: 1rem;
     margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links-active {
-    display: flex;
-  }
-
-  .cta-section {
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
