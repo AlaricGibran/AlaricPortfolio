@@ -98,6 +98,10 @@ body {
 
 /* Tambahkan kode close button di bawah ini */
 
+.hidden {
+  display: none;
+}
+
 .close-button {
   position: absolute;
   top: 1rem;
