@@ -172,13 +172,17 @@ section {
 }
 
 #skills.hidden {
-  display: none; /* Sembunyikan saat kelas .hidden diterapkan */
+  display: none; /* Elemen tidak terlihat dan tidak mengambil ruang */
+  opacity: 0; /* Transparan (opsional jika ingin transisi animasi) */
+  transform: translateY(20px); /* Geser elemen ke bawah untuk efek animasi */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #skills.visible {
-  display: block;
-  opacity: 1; /* Tampilkan saat kelas .visible diterapkan */
-  transform: translateY(0); /* Kembalikan ke posisi semula */
+  display: block; /* Elemen terlihat */
+  opacity: 1; /* Tampilkan elemen */
+  transform: translateY(0); /* Kembali ke posisi semula */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* Back Button */
@@ -262,6 +266,32 @@ section {
   background: #c0392b;
 }
 
+#about-me {
+  background-color: #f4f4f4; /* Sesuaikan dengan warna yang diinginkan */
+  color: #333; /* Warna teks */
+  padding: 20px; /* Sesuaikan padding */
+}
+
+#about-me h2 {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about-me p {
+  font-size: 1rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  max-width: 600px;
+}
+
+.about-me img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+  
 /* Portfolio Section */
 #portfolio {
   background-color: #ffffff;
@@ -273,6 +303,7 @@ section {
   color: #333;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .portfolio-items {
@@ -291,6 +322,7 @@ section {
 .portfolio-item h2 {
   margin-top: 50px;
   font-size: 30px;
+  font-weight: bold;
 }
 
 /* Social Media Section */
@@ -298,6 +330,13 @@ section {
   text-align: center;
   padding: 80px 20px;
   background-color: #e74c3c;
+}
+
+#social-media h1 {
+  tex-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
 }
 
 #social-media img.profile-photo {
