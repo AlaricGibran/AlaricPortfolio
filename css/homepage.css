@@ -379,6 +379,7 @@ section.visible {
     height: 3px;
     background-color: #333;
     border-radius: 5px;
+    gap: 5px;
   }
   
   .nav-links {
