@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Tombol CTA untuk menampilkan skill section
   ctaButton.addEventListener('click', (event) => {
     event.preventDefault();
+    const skillsSection = document.getElementById('skills');
     console.log('CTA Button Triggered');
     skillsSection.classList.remove('hidden'); // Tampilkan skill section
     skillsSection.classList.add('visible'); // Tambahkan animasi
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Tombol Back untuk kembali ke hero section
   backButton.addEventListener('click', (event) => {
     event.preventDefault();
+    const skillsSection = document.getElementById('skills');
     console.log('Back Button Clicked');
     skillsSection.classList.add('hidden'); // Sembunyikan skill section
     skillsSection.classList.remove('visible'); // Hapus kelas visible
