@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
     skillsPopup.classList.remove('visible'); // Hapus animasi
   });
 
+   // Menutup pop-up saat area luar pop-up ditekan
+  skillsPopup.addEventListener('click', (event) => {
+    if (event.target === skillsPopup) {
+      skillsPopup.classList.add('hidden');
+      skillsPopup.classList.remove('visible');
+    }
+  });
+  
   // Hamburger menu
   hamburger.addEventListener('click', () => {
     console.log('Hamburger Clicked');
