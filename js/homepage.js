@@ -13,11 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   ctaButton.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('CTA Button Triggered');
-    console.log('Before;', skilsSection.classList;
     skillsSection.classList.remove('hidden'); // Tampilkan skill section
     skillsSection.classList.add('visible'); // Tambahkan animasi
     heroImage.classList.add('hidden'); // Sembunyikan gambar hero
-    console.log('After:',skillSection.classlist);
     skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
