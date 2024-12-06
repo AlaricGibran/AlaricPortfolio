@@ -178,6 +178,7 @@ section.visible {
   transform: translateY(30px); /* Mulai dengan posisi lebih rendah */
   margin-top: 100px;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  z-index: 10;
 }
 
 #skills.hidden {
@@ -187,6 +188,7 @@ section.visible {
 #skills.visible {
   opacity: 1; /* Tampilkan saat kelas .visible diterapkan */
   transform: translateY(0); /* Kembalikan ke posisi semula */
+  display: block;
 }
 
 /* Back Button */
