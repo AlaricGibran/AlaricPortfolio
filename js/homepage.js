@@ -1,34 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
   const ctaButton = document.getElementById('ctaButton');
-  const backButton = document.getElementById('backButton');
-  const skillsSection = document.getElementById('skills');
-  const heroImage = document.querySelector('.hero-image img');
-  const hamburger = document.querySelector('.hamburger');
   const closeButton = document.getElementById('closeButton');
+  const skillsPopup = document.getElementById('skillsPopup');
+  const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   const navbar = document.querySelector('.navbar');
   let lastScrollTop = 0;
 
-  // Tombol CTA untuk menampilkan skill section
+  // Tombol CTA untuk menampilkan pop-up skill
   ctaButton.addEventListener('click', (event) => {
     event.preventDefault();
-    const skillsSection = document.getElementById('skills');
     console.log('CTA Button Triggered');
-    skillsSection.classList.remove('hidden'); // Tampilkan skill section
-    skillsSection.classList.add('visible'); // Tambahkan animasi
-    heroImage.classList.add('hidden'); // Sembunyikan gambar hero
-    skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    skillsPopup.classList.remove('hidden'); // Tampilkan pop-up
+    skillsPopup.classList.add('visible'); // Tambahkan animasi
   });
 
-  // Tombol Back untuk kembali ke hero section
-  backButton.addEventListener('click', (event) => {
+  // Tombol Close untuk menutup pop-up skill
+  closeButton.addEventListener('click', (event) => {
     event.preventDefault();
-    const skillsSection = document.getElementById('skills');
-    console.log('Back Button Clicked');
-    skillsSection.classList.add('hidden'); // Sembunyikan skill section
-    skillsSection.classList.remove('visible'); // Hapus kelas visible
-    heroImage.classList.remove('hidden'); // Tampilkan kembali gambar hero
-    heroImage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    console.log('Close Button Clicked');
+    skillsPopup.classList.add('hidden'); // Sembunyikan pop-up
+    skillsPopup.classList.remove('visible'); // Hapus animasi
   });
 
   // Hamburger menu
