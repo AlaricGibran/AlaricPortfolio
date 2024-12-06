@@ -106,6 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+  closeButton.addEventListener('click', () => {
+    navLinks.classList.remove('nav-links-active'); // Sembunyikan menu
+    hamburger.classList.remove('hidden'); // Tampilkan tombol hamburger
+    closeButton.classList.add('hidden'); // Sembunyikan tombol close
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   const hamburger = document.querySelector('.hamburger');
