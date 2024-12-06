@@ -159,12 +159,11 @@ body {
   opacity: 0;
 }
 
-/* Menyembunyikan semua section pada awalnya */
 section {
   opacity: 1;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.5s ease-in-out;
 }
+
 /* Skills Section */
 #skills {
   opacity: 0; /* Mulai dengan tidak terlihat */
