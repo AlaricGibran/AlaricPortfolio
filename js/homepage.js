@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ctaButton.addEventListener('click', (event) => {
     event.preventDefault();
     console.log('CTA Button Triggered');
-    skillsPopup.classList.remove('hidden'); // Tampilkan pop-up
-    skillsPopup.classList.add('visible'); // Tambahkan animasi
+    skillsPopup.classList.add('visible'); // Tampilkan pop-up
+    skillsPopup.classList.remove('hidden'); // Hapus kelas hidden
   });
 
   // Tombol Close untuk menutup pop-up skill
