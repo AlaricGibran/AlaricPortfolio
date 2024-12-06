@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Tombol CTA untuk menampilkan skill section
   ctaButton.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log('CTA Button Clicked');
+    console.log('CTA Button Triggered');
+    console.log('Before;', skilsSection.classList;
     skillsSection.classList.remove('hidden'); // Tampilkan skill section
-    skillsSection.classList.add('visible'); // Tambahkan animasi (jika ada)
-    console.log('Skills Section Visible');
+    skillsSection.classList.add('visible'); // Tambahkan animasi
     heroImage.classList.add('hidden'); // Sembunyikan gambar hero
+    console.log('After:',skillSection.classlist);
     skillsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
@@ -26,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Back Button Clicked');
     skillsSection.classList.add('hidden'); // Sembunyikan skill section
     skillsSection.classList.remove('visible'); // Hapus kelas visible
-    console.log('Skills Section Hidden');
     heroImage.classList.remove('hidden'); // Tampilkan kembali gambar hero
     heroImage.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
